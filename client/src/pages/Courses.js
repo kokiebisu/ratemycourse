@@ -33,11 +33,12 @@ export default class Courses extends Component {
   render() {
     return (
       <div>
-        <h3>This is the course page</h3>
+        <h3>This is the Courses page</h3>
         {this.state.courses.map((course, index) => {
           return (
             <Course
               key={index}
+              id={course.id}
               name={course.name}
               professor={course.professor}
               description={course.description}
