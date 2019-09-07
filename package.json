@@ -4,7 +4,9 @@
   "description": "Evaluate your course and don't waste your time...",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Kenichi Okiebisu",
   "license": "ISC",
