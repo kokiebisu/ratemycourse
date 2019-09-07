@@ -1,10 +1,6 @@
 const Course = require('../models/Course');
 
 module.exports = app => {
-  app.get('/', (req, res) => {
-    res.send('Hello');
-  });
-
   app.get('/courses', async (req, res) => {
     try {
       const courses = await Course.find();
