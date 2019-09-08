@@ -1,4 +1,5 @@
-const Course = require('../models/Course');
+const mongoose = require('mongoose');
+const Course = mongoose.model('courses');
 
 module.exports = app => {
   app.get('/courses', async (req, res) => {
