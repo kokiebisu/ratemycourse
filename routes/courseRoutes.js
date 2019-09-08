@@ -3,6 +3,7 @@ const Course = mongoose.model('courses');
 
 module.exports = app => {
   app.get('/courses', async (req, res) => {
+    console.log('received');
     try {
       const courses = await Course.find();
       res.status(200).json({
