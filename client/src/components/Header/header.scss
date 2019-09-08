@@ -5,11 +5,62 @@
     bottom: 10rem;
     display: flex;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
     flex-direction: column;
   }
   align-self: center;
   width: 40rem;
   height: 50rem;
   background-color: white;
+}
+
+.headerboard {
+  margin: 0 auto;
+  &__container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 40rem;
+    background-color: white;
+    padding: 7rem 4rem;
+    border-radius: 9rem 1rem 9rem 1rem;
+    box-shadow: 0 2rem 4rem rgba(black, 0.1);
+    position: relative;
+  }
+
+  &__heading {
+    display: block;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1b1b1b;
+    animation: fadein 1s;
+  }
+
+  &__button {
+    display: block;
+    background-color: #667ac4;
+    padding: 1.2rem 4rem;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 3rem;
+    margin: 0 auto;
+    text-transform: uppercase;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #3f508c;
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }
