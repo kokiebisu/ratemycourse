@@ -1,0 +1,29 @@
+.reviews {
+  margin: 8vw;
+  width: 60rem;
+
+  animation-name: fadedown;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in;
+
+  &__header {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 0.5rem black solid;
+  }
+
+  &__title {
+    font-size: 4rem;
+  }
+}
+
+@keyframes fadedown {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

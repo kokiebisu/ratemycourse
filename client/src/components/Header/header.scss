@@ -1,0 +1,15 @@
+.header {
+  &__container {
+    background-image: url('../../assets/img/header.jpg');
+    position: relative;
+    bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    flex-direction: column;
+  }
+  align-self: center;
+  width: 40rem;
+  height: 50rem;
+  background-color: white;
+}
