@@ -1,11 +1,15 @@
 const mongoose = require('mongoose');
-const app = require('./app');
 // const keys = require('./config/keys');
 require('./models/Course');
 
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true })
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useMongoClient: true
+  })
   .then(() => console.log('Successfully connected to Database'));
+
+const app = require('./app');
 
 require('./routes/courseRoutes')(app);
 
