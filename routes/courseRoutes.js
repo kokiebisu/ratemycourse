@@ -4,7 +4,6 @@ module.exports = app => {
   app.get('/courses', async (req, res) => {
     try {
       const courses = await Course.find();
-      console.log(courses);
       res.status(200).json({
         status: 'success',
         courses
