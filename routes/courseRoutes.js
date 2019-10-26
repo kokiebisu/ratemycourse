@@ -35,6 +35,8 @@ module.exports = app => {
 
   app.get('/courses/:id', async (req, res) => {
     try {
+      id = req.params.id;
+      console.log();
       const course = await Course.findById(req.params.id);
       res.status(200).json({
         status: 'success',

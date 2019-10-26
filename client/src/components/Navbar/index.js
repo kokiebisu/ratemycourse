@@ -13,13 +13,22 @@ class Navbar extends Component {
         <div className="navbar">
           <h3>ratemycourse</h3>
           <div className="navbar__login">
-            <h5>Login</h5>
-            <h5>Courses</h5>
+            <StyledLink to="login">Login</StyledLink>
           </div>
         </div>
       </div>
     );
   }
 }
+
+const StyledLink = styled(Link)`
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+
+  &:hover {
+    color: white;
+  }
+`;
 
 export default Navbar;

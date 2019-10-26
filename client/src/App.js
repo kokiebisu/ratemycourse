@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Front from './pages/Front';
 import Course from './pages/Course';
-import Courses from './pages/Courses';
+import Login from './pages/Login';
 
 export default class App extends Component {
   render() {
@@ -11,7 +11,7 @@ export default class App extends Component {
         <Switch>
           <Route exact path="/" component={Front} />
           <Route path="/courses/:id" component={Course} />
-          <Route path="/courses" component={Courses} />
+          <Route path="/login" component={Login} />
         </Switch>
       </Router>
     );
