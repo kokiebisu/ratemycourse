@@ -1,6 +1,14 @@
-import React from 'react';
-import Wave from 'react-wavify';
+import * as React from 'react';
+
+/**
+ * Styles
+ */
 import './cando.scss';
+
+/**
+ * Components
+ */
+import Wave from 'react-wavify';
 
 // import Card from '../card';
 // import faq from '../../assets/img/faq.svg';

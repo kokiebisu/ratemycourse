@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Wave from '../CustomWave';
 
+/**
+ * Styles
+ */
 import './navbar.scss';
+
+/**
+ * Components
+ */
+import { CustomWave } from './CustomWave';
 
 export const Navbar: React.FC<{}> = () => {
   return (
     <div className='navbar__container'>
-      <Wave />
+      <CustomWave />
       <div className='navbar'>
         <h3>ratemycourse</h3>
         <div className='navbar__login'>

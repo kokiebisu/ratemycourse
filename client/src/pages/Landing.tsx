@@ -1,8 +1,12 @@
-import React from 'react';
+import * as React from 'react';
+
+/**
+ * Components
+ */
 import { Navbar } from '../components/shared/Navbar';
-import { HeaderSection } from '../components/Front/Header';
-import { CandoSection } from '../components/Front/Cando';
-import { AboutSection } from '../components/Front/About';
+import { HeaderSection } from '../components/Landing/Header';
+import { CandoSection } from '../components/Landing/Cando';
+import { AboutSection } from '../components/Landing/About';
 import { Footer } from '../components/shared/Footer';
 
 export const Landing: React.FC<{}> = () => {

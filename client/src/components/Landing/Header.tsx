@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import * as React from 'react';
+import { useState } from 'react';
+
+/**
+ * Styles
+ */
 import './header.scss';
-import AutoCompleteText from '../AutoCompleteText';
 
 export const HeaderSection: React.FC<{}> = () => {
   const [items, setItems] = useState([
