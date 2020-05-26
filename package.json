@@ -4,9 +4,9 @@
   "description": "Evaluate your course and don't waste your time...",
   "main": "index.js",
   "scripts": {
+    "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn server.ts",
-    "start": "node server.js",
-    "build": "tsc",
+    "build": "tsc -p server.ts",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Kenichi Okiebisu",

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Comment, Form } from 'semantic-ui-react';
+// import { Button, Comment, Form } from 'semantic-ui-react';
 
 /**
  * Styles
@@ -9,7 +9,7 @@ import './reviews.scss';
 export const Reviews: React.FC<{}> = () => {
   return (
     <div className='reviews'>
-      <Comment.Group size='massive' className='reviews'>
+      {/* <Comment.Group size='massive' className='reviews'>
         <div className='reviews__header'>
           <h3 className='reviews__title'>Comments</h3>
         </div>
@@ -82,7 +82,7 @@ export const Reviews: React.FC<{}> = () => {
             primary
           />
         </Form>
-      </Comment.Group>
+      </Comment.Group> */}
     </div>
   );
 };
