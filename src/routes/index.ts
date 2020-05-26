@@ -19,5 +19,7 @@ export class Routes {
       .get(this.courseController.getCourseById)
       .put(this.courseController.updateCourseById)
       .delete(this.courseController.deleteCourseById);
+
+    app.route('/api/dummy').get(this.courseController.seedDummyData);
   }
 }

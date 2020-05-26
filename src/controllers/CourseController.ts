@@ -18,9 +18,7 @@ interface Course {
 }
 
 export class CourseController {
-  constructor() {
-    this.seedDummyData(courseDummyData);
-  }
+  private dummyData: Array<Course> = courseDummyData;
 
   /**
    * Adds new student to model
@@ -122,13 +120,12 @@ export class CourseController {
    */
   public seedDummyData = async (
     req: Request,
-    res: Response,
-    data: Array<Course>
+    res: Response
   ): Promise<Response> => {
     try {
-      await CourseModel.collection.insert(data);
+      await CourseModel.collection.insert(this.dummyData);
       return res.json({
-        message: `Successfully sent ${data.length} sample documents`,
+        message: `Successfully sent ${this.dummyData.length} sample documents`,
       });
     } catch (err) {
       return res.send(err);
