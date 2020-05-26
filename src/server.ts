@@ -6,7 +6,7 @@ import path from 'path';
 import mongoose from 'mongoose';
 
 import { loggerMiddleware } from './middlewares/logger';
-import CourseController from './controllers/CourseController';
+import CourseController from './controllers/courseController';
 
 const app = new App();
 
