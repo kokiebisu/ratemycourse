@@ -4,10 +4,11 @@ require('./models/Course');
 
 mongoose
   .connect(keys.mongoURI, {
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
   .then(() => console.log('Successfully connected to database...'))
-  .catch(error => console.log(error));
+  .catch((error) => console.log(error));
 
 const app = require('./app');
 
