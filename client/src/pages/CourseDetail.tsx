@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
-import Navbar from '../components/Navbar';
+import { Navbar } from '../components/shared/Navbar';
 import Left from '../components/left';
 import Right from '../components/right';
-import Footer from '../components/footer';
+import { Footer } from '../components/shared/Footer';
 
 // Hooks
 import { useFetch } from '../hooks/useFetch';
