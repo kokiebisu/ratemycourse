@@ -5,7 +5,8 @@ import cors from 'cors';
 import path from 'path';
 import mongoose from 'mongoose';
 
-import loggerMiddleware from './middlewares/logger';
+import { loggerMiddleware } from './middlewares/logger';
+import CourseController from './controllers/CourseController';
 
 const app = new App({
   port: parseInt(process.env.PORT) || 5000,
