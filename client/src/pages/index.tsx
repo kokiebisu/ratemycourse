@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Pages
-import Front from './pages/Front';
-import Course from './pages/Course';
-import Login from './pages/Login';
+import { Front } from './Front';
+import { CourseDetail } from './CourseDetail';
+import Login from './Login';
 
-export default () => {
+export const App: React.FC<{}> = () => {
   return (
     <Router>
       <Switch>
@@ -14,7 +14,7 @@ export default () => {
           <Front />
         </Route>
         <Route path='/courses/:id'>
-          <Course />
+          <CourseDetail />
         </Route>
         <Route path='/login'>
           <Login />
