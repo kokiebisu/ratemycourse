@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -8,40 +8,36 @@ import Right from '../components/right';
 import Footer from '../components/footer';
 
 // Hooks
-import { useFetch, CourseDetailType, CourseType } from '../hooks/useFetch';
+import { useFetch } from '../hooks/useFetch';
 
 export const CourseDetail: React.FC<{}> = () => {
   const { id } = useParams();
 
-  const [course, setCourse] = useState<CourseDetailType | CourseType[]>();
+  const [course, setCourse] = useState<any>();
 
   const response = useFetch(`/courses/${id}`);
 
-  setCourse(response);
+  useEffect(() => {
+    const tempData = {
+      name: 'Object',
+      professor: 'pro',
+      description: 'description',
+      sad: 0,
+      angry: 0,
+      happy: 0,
+    };
 
-  const tempData = {
-    name: 'Object',
-    professor: 'pro',
-    description: 'description',
-    sad: 0,
-    angry: 0,
-    happy: 0,
-  };
+    setCourse(tempData);
+  }, []);
 
   return (
     <div>
       <Navbar />
       <div className=''>
-        <Left {...tempData} />
-        <Right {...tempData} />
+        <Left {...course} />
+        <Right {...course} />
       </div>
       <Footer />
     </div>
   );
 };
-
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: 5fr 3fr;
-  margin: 8rem;
-`;
