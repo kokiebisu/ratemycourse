@@ -5,10 +5,12 @@ import cors from 'cors';
 import path from 'path';
 import mongoose from 'mongoose';
 
+import loggerMiddleware from './middlewares/logger';
+
 const app = new App({
   port: parseInt(process.env.PORT) || 5000,
   controllers: [new CourseController()],
-  middlewares: [cors(), express.json()],
+  middlewares: [cors(), express.json(), loggerMiddleware],
 });
 
 /**
