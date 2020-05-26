@@ -1,9 +1,10 @@
+export {};
+const express = require('express');
 const mongoose = require('mongoose');
-
-const Router = mongoose.Router();
+let router = express.Router();
 const Course = mongoose.model('courses');
 
-Router.get('/', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const courses = await Course.find();
     res.status(200).json({
@@ -18,7 +19,7 @@ Router.get('/', async (req, res) => {
   }
 });
 
-Router.post('/', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newCourse = await Course.create(req.body);
     res.status(200).json({
@@ -33,9 +34,9 @@ Router.post('/', async (req, res) => {
   }
 });
 
-Router.get('/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
-    id = req.params.id;
+    const id = req.params.id;
     console.log();
     const course = await Course.findById(req.params.id);
     res.status(200).json({
@@ -49,3 +50,5 @@ Router.get('/:id', async (req, res) => {
     });
   }
 });
+
+module.exports = router;

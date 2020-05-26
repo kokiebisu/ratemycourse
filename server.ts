@@ -1,3 +1,5 @@
+export {};
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -9,9 +11,14 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 
 /**
+ * Models
+ */
+require('./models/Course');
+
+/**
  * Routers
  */
-const courseRouter = require('./models/Course');
+const courseRouter = require('./routes/courseRoutes');
 
 const app = express();
 
