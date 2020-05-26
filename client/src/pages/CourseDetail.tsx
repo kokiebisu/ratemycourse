@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import styled from 'styled-components';
 
 import Navbar from '../components/Navbar';
 import Left from '../components/left';
@@ -18,23 +19,21 @@ export const CourseDetail: React.FC<{}> = () => {
 
   setCourse(response);
 
+  const tempData = {
+    name: 'Object',
+    professor: 'pro',
+    description: 'description',
+    sad: 0,
+    angry: 0,
+    happy: 0,
+  };
+
   return (
     <div>
       <Navbar />
       <div className=''>
-        <Left
-          name={this.state.name}
-          professor={this.state.professor}
-          description={this.state.description}
-          happy={this.state.happy}
-          sad={this.state.sad}
-          angry={this.state.angry}
-        />
-        <Right
-          everydayStudy={this.state.everydayStudy}
-          midtermStudy={this.state.midtermStudy}
-          finalStudy={this.state.finalStudy}
-        />
+        <Left {...tempData} />
+        <Right {...tempData} />
       </div>
       <Footer />
     </div>
