@@ -1,20 +1,21 @@
-import React from 'react';
+import * as React from 'react';
 import Wave from 'react-wavify';
 import styled from 'styled-components';
-export default function CustomWave(props) {
+
+export const CustomWave: React.FC<{}> = () => {
   return (
     <StyledWave
-      fill="#569DEC"
+      fill='#569DEC'
       paused={false}
       options={{
         height: 10,
         amplitude: 7,
         speed: 0.35,
-        points: 15
+        points: 15,
       }}
     />
   );
-}
+};
 
 const StyledWave = styled(Wave)`
   transform: rotate(180deg);

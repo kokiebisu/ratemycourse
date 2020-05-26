@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import './about.scss';
 // import image from '../../assets/img/bcit.png';
 import './about.scss';

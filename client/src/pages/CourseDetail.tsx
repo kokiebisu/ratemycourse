@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
 
 import { Navbar } from '../components/shared/Navbar';
-import Left from '../components/left';
-import Right from '../components/right';
+import { Left } from '../components/CourseDetail/Left';
+import { Right } from '../components/CourseDetail/Right';
 import { Footer } from '../components/shared/Footer';
 
 // Hooks
