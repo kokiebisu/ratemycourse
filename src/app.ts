@@ -1,41 +1,28 @@
-import * as express from 'express';
+import express = require('express');
 import { Application } from 'express';
+
+import cors from 'cors';
+
+import { Routes } from './routes';
 
 class App {
   public app: Application;
-  public port: number;
+  public routePrv: Routes = new Routes();
 
-  constructor(appInit: { port: number; middlewares: any; controllers: any }) {
+  constructor() {
     this.app = express();
-    this.port = appInit.port;
-
-    this.middlewares(appInit.middlewares);
-    this.routes(appInit.controllers);
-    this.assets();
+    this.connectMiddlewares();
+    this.routePrv.routes(this.app);
   }
 
-  private middlewares(middlewares: {
-    forEach(arg0: (middleware: any) => void);
-  }) {
-    middlewares.forEach((middleware) => {
-      this.app.use(middleware);
-    });
+  private connectMiddlewares() {
+    this.app.use(express.json());
+    this.app.use(cors());
   }
 
-  private routes(controllers: { forEach(arg0: (controller: any) => void) }) {
-    controllers.forEach((controller) => {
-      this.app.use('/', controller.router);
-    });
-  }
-
-  private assets() {
-    this.app.use(express.static('public'));
-    //   this.app.use(express.static('views'))
-  }
-
-  public listen() {
-    this.app.listen(this.port, () => {
-      console.log(`App is listening on http://localhost:${this.port}`);
+  public listen(port: number) {
+    this.app.listen(port, () => {
+      console.log(`App is listening on http://localhost:${port}`);
     });
   }
 }

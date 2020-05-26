@@ -1,14 +1,16 @@
 import * as express from 'express';
 import { Request, Response } from 'express';
 
+import { BaseController } from './BaseController';
 
 export class CourseController extends BaseController {
-
-  protected async executeImplementation(req: Request, res: Response): Promise<void | any> {
+  protected async executeImplementation(
+    req: Request,
+    res: Response
+  ): Promise<void | any> {
     try {
-
     } catch (err) {
-      return this.fail(err.toString())
+      return this.fail(res, err.toString());
     }
   }
 

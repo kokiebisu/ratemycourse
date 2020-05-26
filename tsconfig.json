@@ -2,14 +2,14 @@
   "compilerOptions": {
     "rootDir": "src/",
     "outDir": "build/",
-    "esModuleInterop": "commonjs",
+    "esModuleInterop": true,
     "resolveJsonModule": true,
     "lib": ["es6"],
     "sourceMap": true,
     "target": "es6",
     "module": "commonjs",
     "baseUrl": "./src",
-    "allowJs":true,
+    "allowJs": true,
     "noImplicitAny": true
   },
   "include": ["src/**/*.ts"],
