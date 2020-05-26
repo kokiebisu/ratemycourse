@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import CourseDetail from '../components/Course';
-import ReactLoading from 'react-loading';
 
 import { useFetch } from '../hooks/useFetch';
 
