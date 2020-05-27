@@ -10,14 +10,36 @@ $margin: (
     8: 2rem
 );
 
-@mixin margin-modifiers($attribute) {
-    @each $key, $value in $margin {
+@mixin margin-modifiers($attribute_one, $attribute_two:"") {
+    @each $key, $value in $margin {          
         &-#{$key} {
-            #{$attribute}: $value;
+            @if $attribute_two != "" {
+                #{$attribute_one}: #{$value};
+                #{$attribute_two}: #{$value};
+            } @else {
+                #{$attribute_one}: #{$value};
+            }   
         }
     }
 }
 
+
 .m {
-    @include margin-modifiers($attribute: 'margin');
+    @include margin-modifiers($attribute_one: 'margin');
+}
+
+.mr {
+    @include margin-modifiers($attribute_one: 'margin-right');
+}
+
+.ml {
+    @include margin-modifiers($attribute_one: 'margin-left');
+}
+
+.my {
+    @include margin-modifiers($attribute_one: 'margin-top', $attribute_two: 'margin-bottom');
+}
+
+.mx {
+    @include margin-modifiers($attribute_one: 'margin-left', $attribute_two: 'margin-right');
 }
