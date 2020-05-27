@@ -1,78 +1,66 @@
-# How to find accurate information about BCIT 🤔
+
+<p align="center">
+  <img width="200" src="https://user-images.githubusercontent.com/43525282/82964148-90f42500-9f79-11ea-8e8b-e096367272c4.png"/>
+</p>
 
 
-# Front
-![Front](https://user-images.githubusercontent.com/43525282/63667598-53176580-c789-11e9-8cfb-0273ad709e0e.gif)
+# ratemycourse
 
+## Demo
 
-# Course Detail
-![Courses](https://user-images.githubusercontent.com/43525282/63667601-54489280-c789-11e9-8d21-4e403f2ae4fb.gif)
+Coming soon!
 
+## Getting Started
 
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-# What is our purpose? 📡
+### Installing
 
-* Purpose 1
-* Purpose 2
-* 
-* 
-* 
-
-# Technology Stack
-
-* React
-* NodeJS
-* Express
-* MongoDB
-* SCSS/CSS
-
-# Libraries
-
-* Semantic UI React
-* Evergreen UI
-
-# Requirements
-
-* A web browser (chrome or firefox preferred)
-* Git version control
-* [Node.JS v8 min.](http://nodejs.org)
-* 
-
-# Installation 📦
+Client side
 
 ```
-Git clone
+cd client && yarn install
 ```
 
-# Configuration 🛠️
-
-1.
-
-# Usage ⚡️
+Server side
 
 ```
-node src/index
+yarn install
 ```
 
- You can use nodemon if you already installed that.
 
-# Roadmap 🚧
-
-* X️  Main Page
-* X️  Database
-* X️  CST Courses
-* X️  Insert Reviews
-* X️  About us
-
-
-# Disclaimer 📖
+## Run
 
 ```
-We are not responsible for anything done with this app.
-You use it at your own risk.
-There are no warranties or guarantees expressed or implied.
-You assume all responsibility and liability.
+cd client && yarn start
 ```
 
-# Final Notes 🙏
-Thank you for checking out our app
+### Break down into end to end tests
+
+Tests for individual components
+
+```
+cd frontend && npm run test
+```
+
+## Deployment
+
+Coming soon!
+
+## Built With
+
+* [React](https://reactjs.org/) - Javascript library
+* [Typescript](https://www.typescriptlang.org) - Superset of Javascript
+* [SCSS](https://sass-lang.com) - CSS Preprocessor
+* [Express](http://expressjs.com) - Server
+* [Mongoose](https://mongoosejs.com) - Object Modelling
+* [MongoDB](https://www.mongodb.com) - Database
+
+## Authors
+
+* **kokoaj** - [kokoaj](https://github.com/kokiebisu)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
