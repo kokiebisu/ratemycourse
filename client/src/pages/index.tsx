@@ -13,12 +13,6 @@ export const App: React.FC<{}> = () => {
         <Route exact path='/'>
           <Landing />
         </Route>
-        <Route path='/courses/:id'>
-          <CourseDetail />
-        </Route>
-        <Route path='/login'>
-          <Login />
-        </Route>
       </Switch>
     </Router>
   );
