@@ -3,8 +3,9 @@
   <img width="200" src="https://user-images.githubusercontent.com/43525282/82964148-90f42500-9f79-11ea-8e8b-e096367272c4.png"/>
 </p>
 
-
-# ratemycourse
+<h3 align="center">
+  Evaluate your courses. Don't waste your time...
+</h3>
 
 ## Demo
 
