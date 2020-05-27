@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-   <div style={{width: '100vw'}} className='font-bold text-5xl text-center'>ratemycourse</div>
+   <div className='w-3 text-5xl text-center'>ratemycourse</div>
   );
 }
 
