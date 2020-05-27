@@ -5,10 +5,6 @@ export class Routes {
   public courseController: CourseController = new CourseController();
 
   public routes(app: Application): void {
-    app.route('/').get((req: Request, res: Response) => {
-      res.status(200).send('hello world');
-    });
-
     app
       .route('/api/courses')
       .get(this.courseController.getCourses)
