@@ -1,0 +1,5 @@
+@import './mixins.scss';
+
+.text {
+    @include color-modifiers($prefix: '--');
+}
