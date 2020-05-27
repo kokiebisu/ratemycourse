@@ -7,14 +7,18 @@ import { loggerMiddleware } from './middlewares/logger';
 
 import { Routes } from './routes';
 
+import { Keys } from './config/keys';
+
 class App {
   public app: Application;
   public routePrv: Routes = new Routes();
+  private keys: Keys = new Keys();
 
   constructor() {
     this.app = express();
     this.connectMiddlewares();
     this.routePrv.routes(this.app);
+    this.mongoSetup();
   }
 
   private connectMiddlewares() {
@@ -25,7 +29,7 @@ class App {
 
   private mongoSetup() {
     mongoose
-      .connect(keys.mongoURI, {
+      .connect(this.keys.getKeys(), {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       })

@@ -10,12 +10,12 @@ export class Routes {
     });
 
     app
-      .route('/courses')
+      .route('/api/courses')
       .get(this.courseController.getCourses)
       .post(this.courseController.addNewCourse);
 
     app
-      .route('/courses/:id')
+      .route('/api/courses/:courseId')
       .get(this.courseController.getCourseById)
       .put(this.courseController.updateCourseById)
       .delete(this.courseController.deleteCourseById);

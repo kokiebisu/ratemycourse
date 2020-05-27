@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
 import { CourseSchema } from '../models/Course';
 import { Request, Response } from 'express';
-import { courseDummyData } from '../data/courseDummyData';
+import { data } from '../data/courseDummyData';
 
 const CourseModel = mongoose.model('Course', CourseSchema);
 
@@ -18,7 +18,7 @@ interface Course {
 }
 
 export class CourseController {
-  private dummyData: Array<Course> = courseDummyData;
+  private dummyData: Array<Course> = data;
 
   /**
    * Adds new student to model
