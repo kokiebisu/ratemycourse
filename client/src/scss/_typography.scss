@@ -1,0 +1,68 @@
+/*
+Font Size
+*/
+$fontSize: (
+    xs: 0.75rem,
+    sm: 0.875rem,
+    base: 1rem,
+    lg: 1.125rem,
+    xl: 1.25rem,
+    2xl: 1.5rem,
+    3xl: 1.875rem,
+    4xl: 2.25rem,
+    5xl: 3rem,
+    6xl: 4rem
+);
+
+@mixin fontSize-modifiers {
+    @each $key, $value in $fontSize {
+        &-#{$key} {
+            font-size: #{$value};
+        }
+    }
+};
+
+.text {
+    @include fontSize-modifiers;
+};
+
+
+/*
+Font Family
+*/
+@font-face {
+    font-family: 'GTWalsheim';
+    src: url('../assets/fonts/GTWalsheim-Bold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'GTWalsheim';
+    src: url('../assets/fonts/GTWalsheim-Medium.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'GTWalsheim';
+    src: url('../assets/fonts/GTWalsheim-Regular.woff2');
+    font-weight: 300;
+}
+
+$GTWalsheim: (
+    bold: 700,
+    medium: 400,
+    regular: 300
+);
+
+@mixin fontFamily-modifiers {
+    @each $key, $value in $GTWalsheim {
+        &-#{$key} {
+            font-family: 'GTWalsheim';
+            font-weight: #{$value}
+        }
+    }
+} 
+
+.font {
+    @include fontFamily-modifiers;
+}
