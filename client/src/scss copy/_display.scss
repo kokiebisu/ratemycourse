@@ -1,0 +1,53 @@
+/*
+Display
+*/
+$display: (
+    hidden: none,
+    block: block,
+    inline-block: inline-block,
+    inline: inline,
+    flex: flex,
+    inline-flex: inline-flex,
+    grid: grid,
+    inline-grid: inline-grid,
+    table: table,
+    table-caption: table-caption,
+    table-cell: table-cell
+);
+
+@mixin display-modifiers {
+    @each $key, $value in $display {
+        .#{$key} {
+            display: #{$value}
+        }
+    }
+}
+
+@include display-modifiers;
+
+/*
+Flex Direction
+*/
+$flex-direction: (
+    row: row,
+    column: column
+);
+
+@mixin flexDirection-modifiers ($reverse) {
+    @each $key, $value in $flex-direction {
+        @if $reverse {
+            &-#{$key}-reverse {
+                flex-direction: #{$value}-reverse;
+            }
+        } @else {
+            &-#{$key} {
+                flex-direction: #{$value};
+            }
+        }
+    }
+};
+
+.flex {
+    @include flexDirection-modifiers($reverse: false); 
+    @include flexDirection-modifiers($reverse: true);  
+}

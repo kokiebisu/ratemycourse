@@ -1,0 +1,115 @@
+/*
+Margin
+*/
+$margin: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 0.75rem,
+    4: 1rem,
+    5: 1.25rem,
+    6: 1.5rem,
+    7: 1.75rem,
+    8: 2rem,
+    10: 2.5rem,
+    12: 3rem,
+    16: 4rem,
+    20: 5rem,
+    24: 6rem,
+    32: 8rem,
+    40: 10rem,
+    48: 12rem,
+    56: 14rem,
+    auto: auto
+);
+
+@mixin margin-modifiers($attribute_one, $attribute_two:"") {
+    @each $key, $value in $margin {          
+        &-#{$key} {
+            @if $attribute_two != "" {
+                #{$attribute_one}: #{$value};
+                #{$attribute_two}: #{$value};
+            } @else {
+                #{$attribute_one}: #{$value};
+            }   
+        }
+    }
+}
+
+.m {
+    @include margin-modifiers($attribute_one: 'margin');
+}
+
+.mr {
+    @include margin-modifiers($attribute_one: 'margin-right');
+}
+
+.ml {
+    @include margin-modifiers($attribute_one: 'margin-left');
+}
+
+.my {
+    @include margin-modifiers($attribute_one: 'margin-top', $attribute_two: 'margin-bottom');
+}
+
+.mx {
+    @include margin-modifiers($attribute_one: 'margin-left', $attribute_two: 'margin-right');
+}
+
+/*
+Padding
+*/
+$padding: (
+    0: 0,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 0.75rem,
+    4: 1rem,
+    5: 1.25rem,
+    6: 1.5rem,
+    7: 1.75rem,
+    8: 2rem,
+    10: 2.5rem,
+    12: 3rem,
+    16: 4rem,
+    20: 5rem,
+    24: 6rem,
+    32: 8rem,
+    40: 10rem,
+    48: 12rem,
+    56: 14rem,
+    auto: auto
+);
+
+@mixin padding-modifiers($attribute_one, $attribute_two:"") {
+    @each $key, $value in $padding {          
+        &-#{$key} {
+            @if $attribute_two != "" {
+                #{$attribute_one}: #{$value};
+                #{$attribute_two}: #{$value};
+            } @else {
+                #{$attribute_one}: #{$value};
+            }   
+        }
+    }
+}
+
+.p {
+    @include padding-modifiers($attribute_one: 'padding');
+}
+
+.pr {
+    @include padding-modifiers($attribute_one: 'padding-right');
+}
+
+.pl {
+    @include padding-modifiers($attribute_one: 'padding-left');
+}
+
+.py {
+    @include padding-modifiers($attribute_one: 'padding-top', $attribute_two: 'padding-bottom');
+}
+
+.px {
+    @include padding-modifiers($attribute_one: 'padding-left', $attribute_two: 'padding-right');
+}

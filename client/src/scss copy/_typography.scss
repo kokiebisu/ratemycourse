@@ -1,0 +1,140 @@
+/*
+Font Size
+*/
+$fontSize: (
+    xs: 0.75rem,
+    sm: 0.875rem,
+    base: 1rem,
+    lg: 1.125rem,
+    xl: 1.25rem,
+    2xl: 1.5rem,
+    3xl: 1.875rem,
+    4xl: 2.25rem,
+    5xl: 3rem,
+    6xl: 4rem
+);
+
+@mixin fontSize-modifiers {
+    @each $key, $value in $fontSize {
+        &-#{$key} {
+            font-size: #{$value};
+        }
+    }
+};
+
+/*
+Text Alignment
+*/
+$text-align: (
+    center: 'center',
+    left: 'left',
+    right: 'right',
+    justify: 'justify'
+);
+
+@mixin textAlignment-modifiers {
+    @each $key, $value in $text-align {
+        &-#{$key} {
+            text-align: #{$value};
+        }
+    }
+}
+
+.text {
+    @include fontSize-modifiers;
+    @include textAlignment-modifiers;
+};
+
+/*
+Font Family
+*/
+@font-face {
+    font-family: 'GTWalsheim';
+    src: url('../assets/fonts/GTWalsheim-Bold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'GTWalsheim';
+    src: url('../assets/fonts/GTWalsheim-Medium.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'GTWalsheim';
+    src: url('../assets/fonts/GTWalsheim-Regular.woff2');
+    font-weight: 300;
+}
+
+$GTWalsheim: (
+    bold: 700,
+    medium: 400,
+    regular: 300
+);
+
+@mixin fontFamily-modifiers {
+    @each $key, $value in $GTWalsheim {
+        &-#{$key} {
+            font-family: 'GTWalsheim';
+            font-weight: #{$value}
+        }
+    }
+} 
+
+.font {
+    @include fontFamily-modifiers;
+}
+
+/*
+Line Height
+*/
+
+$lineHeight: (
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 0.75rem,
+    4: 1rem,
+    5: 1.25rem,
+    6: 1.5rem,
+    7: 1.75rem,
+    8: 2rem,
+    9: 2.25rem,
+    10: 2.5rem
+);
+
+@mixin lineHeight-modifiers {
+    @each $key, $value in $lineHeight {
+        &-#{$key} {
+            line-height: #{$value};
+        }
+    }
+};
+
+.leading {
+    @include lineHeight-modifiers;
+}
+
+/*
+Letter Spacing
+*/
+
+$letterSpacing: (
+    tighter: -0.05em,
+    tight: -0.025em,
+    normal: 0,
+    wide: 0.025em,
+    wider: 0.05em,
+    widest: 0.1em
+);
+
+@mixin letterSpacing-modifiers {
+    @each $key, $value in $letterSpacing {
+        &-#{$key} {
+            letter-spacing: #{$value};
+        }
+    }
+}
+
+.leading {
+    @include letterSpacing-modifiers;
+}

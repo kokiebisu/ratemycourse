@@ -1,7 +1,11 @@
-"use strict";
-exports.__esModule = true;
-var React = require("react");
-var ReactDOM = require("react-dom");
-var pages_1 = require("./pages");
-require("./index.scss");
-ReactDOM.render(<pages_1.App />, document.querySelector('#root'));
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './scss/main.scss'
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
