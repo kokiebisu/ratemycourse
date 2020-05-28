@@ -2,110 +2,110 @@
 Font Size
 */
 $fontSize: (
-    xs: 0.75rem,
-    sm: 0.875rem,
-    base: 1rem,
-    lg: 1.125rem,
-    xl: 1.25rem,
-    2xl: 1.5rem,
-    3xl: 1.875rem,
-    4xl: 2.25rem,
-    5xl: 3rem,
-    6xl: 4rem
+  xs: 0.75rem,
+  sm: 0.875rem,
+  base: 1rem,
+  lg: 1.125rem,
+  xl: 1.25rem,
+  2xl: 1.5rem,
+  3xl: 1.875rem,
+  4xl: 2.25rem,
+  5xl: 3rem,
+  6xl: 4rem,
 );
 
 @mixin fontSize-modifiers {
-    @each $key, $value in $fontSize {
-        &-#{$key} {
-            font-size: #{$value};
-        }
+  @each $key, $value in $fontSize {
+    &-#{$key} {
+      font-size: #{$value};
     }
-};
+  }
+}
 
 .font {
-    @include fontSize-modifiers;
+  @include fontSize-modifiers;
 }
 
 @include breakpoint-modifiers {
-    &--font {
-        @include fontSize-modifiers;
-    }
+  &--font {
+    @include fontSize-modifiers;
+  }
 }
 
 /*
 Text Alignment
 */
 $text-align: (
-    center: 'center',
-    left: 'left',
-    right: 'right',
-    justify: 'justify'
+  center: 'center',
+  left: 'left',
+  right: 'right',
+  justify: 'justify',
 );
 
 @mixin textAlignment-modifiers {
-    @each $key, $value in $text-align {
-        &-#{$key} {
-            text-align: #{$value};
-        }
+  @each $key, $value in $text-align {
+    &-#{$key} {
+      text-align: #{$value};
     }
+  }
 }
 
 .text {
-    @include fontSize-modifiers;
-    @include textAlignment-modifiers;
-};
+  @include fontSize-modifiers;
+  @include textAlignment-modifiers;
+}
 
 @include breakpoint-modifiers {
-    &--text {
-        @include fontSize-modifiers;
-        @include textAlignment-modifiers;
-    }
+  &--text {
+    @include fontSize-modifiers;
+    @include textAlignment-modifiers;
+  }
 }
 
 /*
 Font Family
 */
 @font-face {
-    font-family: 'GTWalsheim';
-    src: url('../assets/fonts/GTWalsheim-Bold.woff2');
-    font-weight: 700;
+  font-family: 'GTWalsheim';
+  src: url('../assets/fonts/GTWalsheim-Bold.woff2');
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: 'GTWalsheim';
-    src: url('../assets/fonts/GTWalsheim-Medium.woff2');
-    font-weight: 400;
+  font-family: 'GTWalsheim';
+  src: url('../assets/fonts/GTWalsheim-Medium.woff2');
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: 'GTWalsheim';
-    src: url('../assets/fonts/GTWalsheim-Regular.woff2');
-    font-weight: 300;
+  font-family: 'GTWalsheim';
+  src: url('../assets/fonts/GTWalsheim-Regular.woff2');
+  font-weight: 300;
 }
 
 $GTWalsheim: (
-    bold: 700,
-    medium: 400,
-    regular: 300
+  bold: 700,
+  medium: 400,
+  regular: 300,
 );
 
 @mixin fontFamily-modifiers {
-    @each $key, $value in $GTWalsheim {
-        &-#{$key} {
-            font-family: 'GTWalsheim';
-            font-weight: #{$value}
-        }
+  @each $key, $value in $GTWalsheim {
+    &-#{$key} {
+      font-family: 'GTWalsheim';
+      font-weight: #{$value};
     }
-} 
+  }
+}
 
 .font {
-    @include fontFamily-modifiers;
+  @include fontFamily-modifiers;
 }
 
 @include breakpoint-modifiers {
-    &--font {
-        @include fontFamily-modifiers;
-    }
+  &--font {
+    @include fontFamily-modifiers;
+  }
 }
 
 /*
@@ -113,34 +113,34 @@ Line Height
 */
 
 $lineHeight: (
-    1: 0.25rem,
-    2: 0.5rem,
-    3: 0.75rem,
-    4: 1rem,
-    5: 1.25rem,
-    6: 1.5rem,
-    7: 1.75rem,
-    8: 2rem,
-    9: 2.25rem,
-    10: 2.5rem
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  7: 1.75rem,
+  8: 2rem,
+  9: 2.25rem,
+  10: 2.5rem,
 );
 
 @mixin lineHeight-modifiers {
-    @each $key, $value in $lineHeight {
-        &-#{$key} {
-            line-height: #{$value};
-        }
+  @each $key, $value in $lineHeight {
+    &-#{$key} {
+      line-height: #{$value};
     }
-};
+  }
+}
 
 .leading {
-    @include lineHeight-modifiers;
+  @include lineHeight-modifiers;
 }
 
 @include breakpoint-modifiers {
-    &--leading {
-        @include lineHeight-modifiers;
-    }
+  &--leading {
+    @include lineHeight-modifiers;
+  }
 }
 
 /*
@@ -148,29 +148,84 @@ Letter Spacing
 */
 
 $letterSpacing: (
-    tighter: -0.05em,
-    tight: -0.025em,
-    normal: 0,
-    wide: 0.025em,
-    wider: 0.05em,
-    widest: 0.1em
+  tighter: -0.05em,
+  tight: -0.025em,
+  normal: 0,
+  wide: 0.025em,
+  wider: 0.05em,
+  widest: 0.1em,
 );
 
 @mixin letterSpacing-modifiers {
-    @each $key, $value in $letterSpacing {
-        &-#{$key} {
-            letter-spacing: #{$value};
-        }
+  @each $key, $value in $letterSpacing {
+    &-#{$key} {
+      letter-spacing: #{$value};
     }
+  }
 }
 
 .leading {
-    @include letterSpacing-modifiers;
+  @include letterSpacing-modifiers;
 }
 
 @include breakpoint-modifiers {
-    &--leading {
-        @include letterSpacing-modifiers;
-    }
+  &--leading {
+    @include letterSpacing-modifiers;
+  }
 }
 
+/*
+Text Decoration
+*/
+$textDecoration: (underline, line-through, no-underline);
+
+@mixin textDecoration-modifiers {
+  @each $key in $textDecoration {
+    .#{$key} {
+      text-decoration: #{$key};
+    }
+  }
+}
+
+@include textDecoration-modifiers;
+
+/*
+Border
+*/
+
+$border: (
+  0: 0px,
+  2: 2px,
+  4: 4px,
+  8: 8px,
+);
+$direction: (
+  t: top,
+  b: bottom,
+  l: left,
+  r: right,
+);
+
+@mixin border-modifiers($attribute1, $attribute2: '') {
+  @each $attribute1_key, $attribute_value in $attribute1 {
+    @if $attribute2 == '' {
+      &-#{$attribute1_key} {
+        border-#{$attribute_value}-width: 1px;
+      }
+    } @else {
+      @each $attribute2_key, $attribute2_value in $attribute2 {
+        @if $attribute1_key != 0 {
+          &-#{$attribute2_key}-#{$attribute1_key} {
+            border-#{$attribute2_value}-width: #{$attribute1_key};
+          }
+        }
+      }
+    }
+  }
+}
+
+.border {
+  @include border-modifiers($attribute1: $border);
+  @include border-modifiers($attribute1: $direction);
+  @include border-modifiers($attribute1: $border, $attribute2: $direction);
+}

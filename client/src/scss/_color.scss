@@ -2,6 +2,8 @@ $colors: (
   primary: #414381,
   secondary: #d9b645,
   transparent: transparent,
+  white: #ffffff,
+  lightblue: #0099ff,
 );
 
 @mixin color-modifiers($attribute) {
@@ -30,4 +32,4 @@ $colors: (
   &--bg {
     @include color-modifiers($attribute: 'background-color');
   }
-};
+}
