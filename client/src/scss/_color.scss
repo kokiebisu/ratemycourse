@@ -20,7 +20,7 @@ $colors: (
   @include color-modifiers($attribute: 'background-color');
 }
 
-@include breakpoints-modifiers {
+@include breakpoint-modifiers {
   &--bg {
     @include color-modifiers($attribute: 'background-color');
   }

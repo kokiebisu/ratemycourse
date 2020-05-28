@@ -5,7 +5,7 @@ $breakpoints: (
   xl: 1200px,
 );
 
-@mixin breakpoints-modifiers {
+@mixin breakpoint-modifiers {
   @each $key, $value in $breakpoints {
     .#{$key} {
       @media (min-width: #{$value}) {

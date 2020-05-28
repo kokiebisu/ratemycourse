@@ -51,3 +51,10 @@ $flex-direction: (
   @include flexDirection-modifiers($reverse: false);
   @include flexDirection-modifiers($reverse: true);
 }
+
+@include breakpoint-modifiers {
+    &--flex {
+        @include flexDirection-modifiers($reverse: false);
+        @include flexDirection-modifiers($reverse: true);
+    }
+}
