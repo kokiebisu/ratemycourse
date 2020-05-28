@@ -8,8 +8,10 @@ export const Header = () => {
           <div className='bg--primary'>
             <h3 className='font-medium font-2xl color-white'>ratemycourse</h3>
           </div>
-          <div className='bg-lightblue'>
-            <button className='color-white'>button</button>
+          <div className='bg-lightblue px-7 py-3'>
+            <button className='color-white bg-lightblue no-decoration border-none'>
+              button
+            </button>
           </div>
         </div>
       </div>
