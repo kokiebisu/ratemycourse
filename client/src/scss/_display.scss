@@ -1,0 +1,23 @@
+$display: (
+    hidden: none,
+    block: block,
+    inline-block: inline-block,
+    inline: inline,
+    flex: flex,
+    inline-flex: inline-flex,
+    grid: grid,
+    inline-grid: inline-grid,
+    table: table,
+    table-caption: table-caption,
+    table-cell: table-cell
+);
+
+@mixin display-modifiers {
+    @each $key, $value in $display {
+        .#{$key} {
+            display: #{$value}
+        }
+    }
+}
+
+@include display-modifiers;
