@@ -165,3 +165,56 @@ $overflow: (
     @include overflow-modifiers($direction: 'y', $prefix: '-');
   }
 }
+
+/*
+Position
+*/
+$position: (
+  static: static,
+  fixed: fixed,
+  absolute: absolute,
+  relative: relative,
+  sticky: sticky,
+);
+
+@mixin position-modifiers {
+  @each $key, $value in $position {
+    .#{$key} {
+      position: #{$value};
+    }
+  }
+}
+
+@include position-modifiers;
+
+/*
+Position Measurement
+*/
+$measure: (
+  0: 0,
+  10p: 10%,
+  20p: 20%,
+  30p: 30%,
+  40p: 40%,
+  50p: 50%,
+);
+
+$directions: (top, bottom, right, left);
+
+@mixin positionMeasure-modifiers($direction) {
+  @each $key, $value in $measure {
+    &-#{$key} {
+      #{$direction}: #{$value};
+    }
+  }
+}
+
+@mixin direction-modifiers {
+  @each $value in $directions {
+    .#{$value} {
+      @include positionMeasure-modifiers($direction: #{$value});
+    }
+  }
+}
+
+@include direction-modifiers;

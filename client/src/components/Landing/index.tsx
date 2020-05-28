@@ -12,7 +12,7 @@ export const Landing: React.FC<{}> = () => {
       <div className='w-screen h-auto'>
         <TopShape color='#414381' />
       </div>
-      <div style={{ position: 'absolute', top: 0, width: '100vw' }}>
+      <div className='absolute w-screen top-0'>
         <Header />
       </div>
     </>
