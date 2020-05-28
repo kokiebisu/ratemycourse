@@ -22,6 +22,16 @@ $fontSize: (
     }
 };
 
+.font {
+    @include fontSize-modifiers;
+}
+
+@include breakpoint-modifiers {
+    &--font {
+        @include fontSize-modifiers;
+    }
+}
+
 /*
 Text Alignment
 */
@@ -44,6 +54,13 @@ $text-align: (
     @include fontSize-modifiers;
     @include textAlignment-modifiers;
 };
+
+@include breakpoint-modifiers {
+    &--text {
+        @include fontSize-modifiers;
+        @include textAlignment-modifiers;
+    }
+}
 
 /*
 Font Family
@@ -85,6 +102,12 @@ $GTWalsheim: (
     @include fontFamily-modifiers;
 }
 
+@include breakpoint-modifiers {
+    &--font {
+        @include fontFamily-modifiers;
+    }
+}
+
 /*
 Line Height
 */
@@ -114,6 +137,12 @@ $lineHeight: (
     @include lineHeight-modifiers;
 }
 
+@include breakpoint-modifiers {
+    &--leading {
+        @include lineHeight-modifiers;
+    }
+}
+
 /*
 Letter Spacing
 */
@@ -138,3 +167,10 @@ $letterSpacing: (
 .leading {
     @include letterSpacing-modifiers;
 }
+
+@include breakpoint-modifiers {
+    &--leading {
+        @include letterSpacing-modifiers;
+    }
+}
+

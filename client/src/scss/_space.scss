@@ -40,20 +40,50 @@ $margin: (
     @include margin-modifiers($attribute_one: 'margin');
 }
 
+@include breakpoint-modifiers {
+    &--m {
+        @include margin-modifiers($attribute_one: 'margin');
+    }  
+}
+
 .mr {
     @include margin-modifiers($attribute_one: 'margin-right');
+}
+
+@include breakpoint-modifiers {
+    &--mr {
+        @include margin-modifiers($attribute_one: 'margin-right');
+    }
 }
 
 .ml {
     @include margin-modifiers($attribute_one: 'margin-left');
 }
 
+@include breakpoint-modifiers {
+    &--ml {
+        @include margin-modifiers($attribute_one: 'margin-left');
+    }
+}
+
 .my {
     @include margin-modifiers($attribute_one: 'margin-top', $attribute_two: 'margin-bottom');
 }
 
+@include breakpoint-modifiers {
+    &--my {
+        @include margin-modifiers($attribute_one: 'margin-top', $attribute_two: 'margin-bottom');
+    }
+}
+
 .mx {
     @include margin-modifiers($attribute_one: 'margin-left', $attribute_two: 'margin-right');
+}
+
+@include breakpoint-modifiers {
+    &--mx {
+        @include margin-modifiers($attribute_one: 'margin-left', $attribute_two: 'margin-right');
+    }
 }
 
 /*

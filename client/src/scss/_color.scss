@@ -1,19 +1,33 @@
 $colors: (
-    primary: #559DEC
+  primary: #414381,
+  secondary: #d9b645,
+  transparent: transparent,
 );
 
 @mixin color-modifiers($attribute) {
-    @each $key, $value in $colors {
-        &--#{$key} {
-            #{$attribute}: #{$value};
-        }
+  @each $key, $value in $colors {
+    &-#{$key} {
+      #{$attribute}: #{$value};
     }
+  }
 }
 
 .color {
+  @include color-modifiers($attribute: 'color');
+}
+
+@include breakpoint-modifiers {
+  &--color {
     @include color-modifiers($attribute: 'color');
+  }
 }
 
 .bg {
-    @include color-modifiers($attribute: 'background-color');
+  @include color-modifiers($attribute: 'background-color');
 }
+
+@include breakpoint-modifiers {
+  &--bg {
+    @include color-modifiers($attribute: 'background-color');
+  }
+};
