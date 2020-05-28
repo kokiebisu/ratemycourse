@@ -22,6 +22,16 @@ $fontSize: (
     }
 };
 
+.font {
+    @include fontSize-modifiers;
+}
+
+@include breakpoint-modifiers {
+    &--font {
+        @include fontSize-modifiers;
+    }
+}
+
 /*
 Text Alignment
 */
@@ -163,3 +173,4 @@ $letterSpacing: (
         @include letterSpacing-modifiers;
     }
 }
+
