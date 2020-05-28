@@ -94,5 +94,7 @@ $borderRadiusDirection: (
 }
 
 .rounded {
+    @include borderRadius-modifiers($attribute1: $borderRadius);
+    @include borderRadius-modifiers($attribute1: $borderRadiusDirection);
     @include borderRadius-modifiers($attribute1: $borderRadius, $attribute2: $borderRadiusDirection);
 }

@@ -23,6 +23,16 @@ $display: (
   }
 }
 
+@include display-modifiers;
+
+@include breakpoint-modifiers {
+  @each $key, $value in $display {
+    &--#{$key} {
+      display: #{$value};
+    }
+  }
+};
+
 /*
 Justify Content
 */
@@ -69,7 +79,6 @@ $alignItems: (
   @include alignItem-modifiers;
 }
 
-@include display-modifiers;
 
 /*
 Flex Direction
