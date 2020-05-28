@@ -16,6 +16,12 @@ $colors: (
   @include color-modifiers($attribute: 'color');
 }
 
+@include breakpoint-modifiers {
+  &--color {
+    @include color-modifiers($attribute: 'color');
+  }
+}
+
 .bg {
   @include color-modifiers($attribute: 'background-color');
 }
@@ -23,9 +29,5 @@ $colors: (
 @include breakpoint-modifiers {
   &--bg {
     @include color-modifiers($attribute: 'background-color');
-  }
-
-  &--color {
-    @include color-modifiers($attribute: 'color');
   }
 };

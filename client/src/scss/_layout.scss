@@ -61,8 +61,20 @@ $height: (
   @include measure-modifiers($type: $width, $attribute: 'width');
 }
 
+@include breakpoint-modifiers {
+  &--w {
+    @include measure-modifiers($type: $width, $attribute: 'width');
+  }
+}
+
 .h {
   @include measure-modifiers($type: $height, $attribute: 'height');
+}
+
+@include breakpoint-modifiers {
+  &--h {
+    @include measure-modifiers($type: $height, $attribute: 'height');
+  }
 }
 
 /*
@@ -100,6 +112,12 @@ $maxWidth: (
   @include maxWidth-modifiers;
 }
 
+@include breakpoint-modifiers {
+  &--max-w {
+    @include maxWidth-modifiers;
+  }
+}
+
 /*
 Overflow
 */
@@ -122,10 +140,28 @@ $overflow: (
   @include overflow-modifiers;
 }
 
+@include breakpoint-modifiers {
+  &--overflow {
+    @include overflow-modifiers;
+  }
+}
+
 .overflow-x {
   @include overflow-modifiers($direction: 'x', $prefix: '-');
 }
 
+@include breakpoint-modifiers {
+  &--overflow-x {
+    @include overflow-modifiers($direction: 'x', $prefix: '-');
+  }
+}
+
 .overflow-y {
   @include overflow-modifiers($direction: 'y', $prefix: '-');
+}
+
+@include breakpoint-modifiers {
+  &--overflow-y {
+    @include overflow-modifiers($direction: 'y', $prefix: '-');
+  }
 }
